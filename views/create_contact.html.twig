@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+
+{% block title %}New Contact{% endblock %}
+
+{% block h1 %}All about {{ contact.get("name") }}{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-block">
+        <h4 class="card-title">{{ contact.get("name") }}</h4>
+        <ul>
+            <li>{{ contact.get("email") }}</li>
+            <li>{{ contact.get("phone") }}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

@@ -1,4 +1,4 @@
-# _{Application Name}_
+# _PHPeople_
 
 #### _An address book app, February 10, 2017_
 

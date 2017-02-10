@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Home{% endblock %}
+
+{% block h1 %}
+{% if contacts %}
+Here are your PHPeople!
+{% else %}
+Welcome to PHPeople!
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<form action="/create_contact" method="post" class="form-group">
+    <label for="name">Name: </label>
+    <input id="name" name="name" type="text" class="form-control">
+    <label for="email">Email: </label>
+    <input id="email" name="email" type="email" class="form-control">
+    <label for="phone">Phone Number: </label>
+    <input id="phone" name="phone" type="tel" class="form-control">
+    <button type="submit" class="btn">Create Contact</button>
+</form>
+{% endblock %}
