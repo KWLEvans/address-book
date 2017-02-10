@@ -27,7 +27,7 @@ Welcome to PHPeople!
 
 {% for contact in contacts %}
 <div class="card">
-    <h3 class="card-header">{{ contact.get("name") }}</h3>
+    <h3 class="card-header">{{ contact.get("name") }}<img src="img/remove.png" class="remove-button" alt="remove icon"></h3>
     <div class="card-block">
         <ul>
             <li><strong>Email: </strong>{{ contact.get("email") }}</li>
@@ -36,7 +36,7 @@ Welcome to PHPeople!
     </div>
 </div>
 {% endfor %}
-<form action="/delete_contacts">
+<form id="delete-all-form" action="/delete_contacts">
     <button type="submit" class="btn">Delete All Contacts</button>
 </form>
 {% endif %}

@@ -28,5 +28,12 @@ $app->get("/delete_contacts", function() use ($app) {
     return $app["twig"]->render("delete_contacts.html.twig");
 });
 
+$app->post("/delete_one", function() use ($app) {
+    $data = $_POST["userToDelete"];
+    $target = Contact::getByName($data);
+    Contact::delete($target);
+    return true;
+});
+
 return $app;
 ?>

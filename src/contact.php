@@ -28,6 +28,21 @@ class Contact
         array_push($_SESSION["contact_list"], $this);
     }
 
+    static function getByName($contact_name)
+    {
+        foreach ($_SESSION["contact_list"] as $contact) {
+            if ($contact->name == $contact_name) {
+                return $contact;
+            }
+        }
+    }
+
+    static function delete($contact_object)
+    {
+        $target = array_search($contact_object, $_SESSION["contact_list"]);
+        unset($_SESSION["contact_list"][$target]);
+    }
+
     static function getAll() {
         return $_SESSION["contact_list"];
     }
