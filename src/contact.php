@@ -22,6 +22,19 @@ class Contact
     {
         $this->$property = $value;
     }
+
+    function save()
+    {
+        array_push($_SESSION["contact_list"], $this);
+    }
+
+    static function getAll() {
+        return $_SESSION["contact_list"];
+    }
+
+    static function deleteAll() {
+        $_SESSION["contact_list"] = [];
+    }
 }
 
 ?>

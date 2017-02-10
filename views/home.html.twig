@@ -20,4 +20,24 @@ Welcome to PHPeople!
     <input id="phone" name="phone" type="tel" class="form-control">
     <button type="submit" class="btn">Create Contact</button>
 </form>
+
+{% if contacts %}
+<h2>Contacts</h2>
+
+
+{% for contact in contacts %}
+<div class="card">
+    <h3 class="card-header">{{ contact.get("name") }}</h3>
+    <div class="card-block">
+        <ul>
+            <li><strong>Email: </strong>{{ contact.get("email") }}</li>
+            <li><strong>Phone Number: </strong>{{ contact.get("phone") }}</li>
+        </ul>
+    </div>
+</div>
+{% endfor %}
+<form action="/delete_contacts">
+    <button type="submit" class="btn">Delete All Contacts</button>
+</form>
+{% endif %}
 {% endblock %}
