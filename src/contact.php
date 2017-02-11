@@ -3,14 +3,29 @@
 class Contact
 {
     private $name;
+    private $street;
+    private $city;
+    private $state;
+    private $zip;
+    private $address;
     private $email;
     private $phone;
 
-    function __construct($name, $email, $phone)
+    function __construct($name, $street, $city, $state, $zip, $email, $phone)
     {
         $this->name = $name;
+        $this->street = $street;
+        $this->city = $city;
+        $this->state = $state;
+        $this->zip = $zip;
+        $this->address = $this->buildAddress();
         $this->email = $email;
         $this->phone = $phone;
+    }
+
+    function buildAddress()
+    {
+      return $this->address = $this->street . " " . $this->city . ", " . $this->state . " " . $this->zip;
     }
 
     function get($property)

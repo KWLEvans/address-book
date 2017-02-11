@@ -1,6 +1,39 @@
-.remove-button {
-    height: 30px;
-    width: 30px;
+h1 {
+  margin-left: 30px;
+}
+
+h2 {
+  border-bottom: 3px solid black;
+}
+
+#new-contact-button, #delete-all-button, #edit-submit-button {
+  margin-top: 20px;
+}
+
+#edit-form {
+  padding-top: 20px;
+}
+
+#contacts {
+  margin-top: 50px;
+}
+
+.remove-button, .edit-button {
+    height: 27px;
+    width: 27px;
     float: right;
     cursor: pointer;
+}
+
+.edit-button {
+  margin-right: 30px;
+}
+
+.remove-button:hover, .edit-button:hover {
+  height: 30px;
+  width: 30px;
+}
+
+.remove-button:hover {
+  margin-right: -3px;
 }

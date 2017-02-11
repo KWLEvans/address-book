@@ -9,8 +9,9 @@
     <div class="card-block">
         <h4 class="card-title">{{ contact.get("name") }}</h4>
         <ul>
-            <li>{{ contact.get("email") }}</li>
-            <li>{{ contact.get("phone") }}</li>
+          <li><strong>Address: </strong>{{ contact.get("address") }}</li>
+          <li><strong>Email: </strong>{{ contact.get("email") }}</li>
+          <li><strong>Phone Number: </strong>{{ contact.get("phone") }}</li>
         </ul>
     </div>
 </div>
