@@ -43,6 +43,12 @@ class Contact
         array_push($_SESSION["contact_list"], $this);
     }
 
+    function delete()
+    {
+      $target = array_search($this, $_SESSION["contact_list"]);
+      unset($_SESSION["contact_list"][$target]);
+    }
+
     static function getByName($contact_name)
     {
         foreach ($_SESSION["contact_list"] as $contact) {
@@ -50,12 +56,6 @@ class Contact
                 return $contact;
             }
         }
-    }
-
-    static function delete($contact_object)
-    {
-        $target = array_search($contact_object, $_SESSION["contact_list"]);
-        unset($_SESSION["contact_list"][$target]);
     }
 
     static function getAll() {

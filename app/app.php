@@ -31,7 +31,7 @@ $app->get("/delete_contacts", function() use ($app) {
 $app->get("/delete_one", function() use ($app) {
     $data = $_GET["userToDelete"];
     $target = Contact::getByName($data);
-    Contact::delete($target);
+    $target->delete();
     return true;
 });
 

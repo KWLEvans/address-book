@@ -1,6 +1,6 @@
 $(function() {
 
-  if ($("#contacts")) {
+  if ($("#contacts").length > 0) {
     $("#new-contact-form").hide();
     $("#add-contact-header, #contacts").addClass("clickable-header");
     $("#add-contact-header").click(function() {
