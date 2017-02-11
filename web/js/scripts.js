@@ -1,4 +1,16 @@
 $(function() {
+
+  if ($("#contacts")) {
+    $("#new-contact-form").hide();
+    $("#add-contact-header, #contacts").addClass("clickable-header");
+    $("#add-contact-header").click(function() {
+      $("#new-contact-form").slideToggle();
+    });
+    $("#contacts").click(function() {
+      $("#contacts").nextAll().slideToggle();
+    });
+  }
+
   $("#new-contact-button").click(function() {
     event.preventDefault();
     var userInput = $("input").get();

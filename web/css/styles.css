@@ -6,6 +6,14 @@ h2 {
   border-bottom: 3px solid black;
 }
 
+.clickable-header {
+  cursor: pointer;
+}
+
+.clickable-header:hover {
+  text-shadow: 1px 1px grey;
+}
+
 #new-contact-button, #delete-all-button, #edit-submit-button {
   margin-top: 20px;
 }
@@ -16,6 +24,23 @@ h2 {
 
 #contacts {
   margin-top: 50px;
+}
+
+label {
+  margin-top: 8px;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+.card li {
+  line-height: 30px;
+  list-style: none;
+}
+
+.card-block {
+  padding-bottom: 0px;
 }
 
 .remove-button, .edit-button {

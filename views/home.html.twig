@@ -11,7 +11,7 @@ Welcome to PHPeople!
 {% endblock %}
 
 {% block content %}
-<h2>Add new contact</h2>
+<h2 id="add-contact-header">Add new contact</h2>
 <form action="/create_contact" method="post" id="new-contact-form" class="form-group">
     <label for="name">Name: </label>
     <input id="name" name="name" type="text" class="form-control">
